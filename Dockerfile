@@ -4,5 +4,5 @@ RUN apk add --update git && \
   rm -rf /tmp/* /var/cache/apk/*
 RUN git clone https://github.com/vervallsweg/cast-web-api.git . && \
   npm install 
-EXPOSE 8080
-CMD ["node","/cast-web-api/castWebApi.js","--hostname=0.0.0.0","--port=8080"]
+EXPOSE 3003
+CMD ["node","/cast-web-api/castWebApi.js","--hostname=192.168.86.100","--port=3003","--net=host"]
