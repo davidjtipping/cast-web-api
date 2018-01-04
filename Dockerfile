@@ -5,4 +5,4 @@ RUN apk add --update git && \
 RUN git clone https://github.com/vervallsweg/cast-web-api.git . && \
   npm install 
 EXPOSE 3003
-CMD ["node","/cast-web-api/castWebApi.js","--hostname=localhost","--port=3003","--net=host"]
+CMD ["node","/cast-web-api/castWebApi.js","--hostname=0.0.0.0","--port=3003","--net=host"]
